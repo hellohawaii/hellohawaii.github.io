@@ -2,7 +2,7 @@
 
 - Template: [gibrantaowu/homepage](https://github.com/gibrantaowu/homepage), commit `90d93990f73bf77e919dd630425f5bf3db9bc1b2`, based on [Academic Pages](https://github.com/academicpages/academicpages.github.io). The original MIT license is preserved in `LICENSE`.
 - Profile photograph: the image labeled Shuzhi Liu on the [Natural Programming Lab people page](https://natural-programming-lab.github.io/people/), from [the original image](https://natural-programming-lab.github.io/images/people/shuzhi-liu.jpg).
-- Advisor and mentor links: [Lin Gao](http://www.geometrylearning.com/) and [Quanming Yao](https://lars-group.github.io/).
+- Advisor and mentor links: current Ph.D. advisor [Yewen (Evan) Pu](https://evanthebouncy.github.io/), master's advisor [Lin Gao](http://www.geometrylearning.com/), and Tsinghua mentor [Quanming Yao](https://lars-group.github.io/).
 
 ## Publication figures
 

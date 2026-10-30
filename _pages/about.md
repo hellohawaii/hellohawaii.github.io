@@ -12,7 +12,7 @@ redirect_from:
   - /publications/
 ---
 
-I am a Ph.D. student at the [College of Computing and Data Science (CCDS), Nanyang Technological University](https://www.ntu.edu.sg/computing). My research focuses on **how humans can collaborate more effectively with large language models (LLMs)**.
+I am a Ph.D. student at [NTU](https://www.ntu.edu.sg/), supervised by [Prof. Yewen (Evan) Pu](https://evanthebouncy.github.io/). My research focuses on **how humans can collaborate more effectively with large language models (LLMs)**.
 
 Previously, I was a research assistant in the Department of Electronic Engineering at Tsinghua University, mentored by [Prof. Quanming Yao](https://lars-group.github.io/). I received my master's degree in Computer Science and Technology from the Institute of Computing Technology, Chinese Academy of Sciences, advised by [Prof. Lin Gao](http://www.geometrylearning.com/), and my bachelor's degree from the University of Chinese Academy of Sciences.
 
