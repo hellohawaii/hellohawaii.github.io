@@ -3,9 +3,13 @@
 *
 * http://codepen.io/lukejacksonn/pen/PwmwWV
 *
+* Skipped when #site-nav is absent (masthead removed).
 */
 
 var $nav = $('#site-nav');
+
+if ($nav.length) {
+
 var $btn = $('#site-nav button');
 var $vlinks = $('#site-nav .visible-links');
 var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
@@ -24,7 +28,7 @@ function updateNav() {
       // Record the width of the list
       breaks.push($vlinks.width());
 
-      // Move item to the hidden list
+      // Move the item to the hidden list
       $vlinks.children("*:not(.persist)").last().prependTo($hlinks);
 
       availableSpace = $btn.hasClass("hidden") ? $nav.width() : $nav.width() - $btn.width() - 30;
@@ -36,7 +40,7 @@ function updateNav() {
     // The visible list is not overflowing
   } else {
 
-    // There is space for another item in the nav
+    // There is space for another item in the visible list
     while (breaks.length > 0 && availableSpace > breaks[breaks.length - 1]) {
       // Move the item to the visible list
       if ($vlinks_persist_tail.children().length > 0) {
@@ -84,3 +88,5 @@ $btn.on('click', function () {
 });
 
 updateNav();
+
+}

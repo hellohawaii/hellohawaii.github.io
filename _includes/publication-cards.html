@@ -1,0 +1,76 @@
+{% assign highlights = site.data.publications_list %}
+{% if highlights and highlights.size > 0 %}
+<div class="research-highlight-cards">
+  {% for item in highlights %}
+  {% assign link_href = item.title_url | default: item.paper_url %}
+  <article class="research-highlight-card">
+    <div class="research-highlight-card__media">
+      {% if link_href and link_href != '' %}
+      <a href="{{ link_href }}" class="research-highlight-card__media-link">
+        <img
+          src="{{ item.image | relative_url }}"
+          alt="{{ item.title | default: 'Paper teaser' | escape }}"
+          loading="lazy"
+          width="180"
+          height="120" />
+      </a>
+      {% else %}
+      <span class="research-highlight-card__media-link research-highlight-card__media-link--static">
+        <img
+          src="{{ item.image | relative_url }}"
+          alt="{{ item.title | default: 'Paper teaser' | escape }}"
+          loading="lazy"
+          width="180"
+          height="120" />
+      </span>
+      {% endif %}
+    </div>
+    <div class="research-highlight-card__body">
+      {% if item.title and link_href and link_href != '' %}
+      <h3 class="research-highlight-card__title">
+        <a href="{{ link_href }}">{{ item.title }}</a>
+      </h3>
+      {% elsif item.title %}
+      <h3 class="research-highlight-card__title">{{ item.title }}</h3>
+      {% endif %}
+      {% if item.authors %}
+      <p class="research-highlight-card__authors">{{ item.authors }}</p>
+      {% endif %}
+      {% if item.venue_line %}
+      <p class="research-highlight-card__venue">{{ item.venue_line }}</p>
+      {% endif %}
+      {% if item.excerpt %}
+      <p class="research-highlight-card__excerpt">{{ item.excerpt }}</p>
+      {% endif %}
+      <div class="research-highlight-card__footer">
+        <div class="research-highlight-card__links">
+          {% if item.paper_url and item.paper_url != '' %}
+          <a class="research-highlight-card__action" href="{{ item.paper_url }}"><i class="fas fa-file-lines" aria-hidden="true"></i> Paper</a>
+          {% endif %}
+          {% if item.website_url and item.website_url != '' %}
+          <a class="research-highlight-card__action" href="{{ item.website_url }}"><i class="fas fa-globe" aria-hidden="true"></i> Website</a>
+          {% endif %}
+          {% if item.pdf_url and item.pdf_url != '' %}
+          <a class="research-highlight-card__action" href="{{ item.pdf_url }}"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>
+          {% endif %}
+          {% if item.code_url and item.code_url != '' %}
+          <a class="research-highlight-card__action" href="{{ item.code_url }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+          {% endif %}
+          {% if item.bibtex_url and item.bibtex_url != '' %}
+          <a class="research-highlight-card__action" href="{{ item.bibtex_url | relative_url }}" download><i class="fas fa-quote-right" aria-hidden="true"></i> BibTeX</a>
+          {% endif %}
+        </div>
+        {% if item.tags and item.tags.size > 0 %}
+        <ul class="research-highlight-card__tags">
+          {% for tag in item.tags %}
+          <li><span class="research-highlight-card__tag">{{ tag }}</span></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+    <span class="research-highlight-card__deco" aria-hidden="true"><i class="fas fa-scroll"></i></span>
+  </article>
+  {% endfor %}
+</div>
+{% endif %}

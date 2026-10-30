@@ -1,26 +1,17 @@
-# Ignore the contents of the _site directory and other cache directories
-_site/
-.sass-cache/
-
-# Ignore the directory for local files during development
-local/
-
-# Ignore the Gemfile that is generated
-Gemfile.lock
-
-# Ignore files created by npm
-node_modules
-package-lock.json
-
-# Ignore the vendor file at root level and bundle for alternative installation
-/vendor/
-.bundle/
-
-# Ignore folders related to IDEs
-.vscode/
-
-# Ignore files created by MacOS
+node_modules/
+.env*
+!.env.example
 .DS_Store
+*.tar.gz
+qa/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+/vendor/
+*.deb
 
-# Ignore the main.min.js since it should be built as part of jekyll-build.yml
-assets/js/main.min.js
+# Generated output and private source documents
+/dist/
+/files/Shuzhi-Liu-CV.docx
